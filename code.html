@@ -1,0 +1,1279 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'tertiary-fixed': '#6ffbbe',
+              'on-error': '#ffffff',
+              'on-tertiary-fixed-variant': '#005236',
+              'surface-container-high': '#e2e7ff',
+              tertiary: '#006947',
+              'surface-container-highest': '#dae2fd',
+              error: '#ba1a1a',
+              background: '#faf8ff',
+              'error-container': '#ffdad6',
+              'inverse-primary': '#68dba9',
+              'on-tertiary': '#ffffff',
+              'primary-fixed-dim': '#68dba9',
+              'on-background': '#131b2e',
+              'on-surface': '#131b2e',
+              'tertiary-container': '#00855b',
+              'on-primary-fixed': '#002114',
+              'inverse-surface': '#283044',
+              'outline-variant': '#bccac0',
+              'on-secondary-fixed': '#2a1700',
+              secondary: '#855300',
+              outline: '#6d7a72',
+              'on-tertiary-fixed': '#002113',
+              'primary-container': '#00855d',
+              'surface-container-lowest': '#ffffff',
+              'secondary-container': '#fea619',
+              'surface-variant': '#dae2fd',
+              'tertiary-fixed-dim': '#4edea3',
+              surface: '#faf8ff',
+              'secondary-fixed-dim': '#ffb95f',
+              'on-secondary': '#ffffff',
+              'surface-tint': '#006c4a',
+              'on-secondary-container': '#684000',
+              'primary-fixed': '#85f8c4',
+              'on-error-container': '#93000a',
+              'surface-container-low': '#f2f3ff',
+              'inverse-on-surface': '#eef0ff',
+              'surface-dim': '#d2d9f4',
+              'on-primary': '#ffffff',
+              'on-tertiary-container': '#f5fff6',
+              'on-secondary-fixed-variant': '#653e00',
+              'secondary-fixed': '#ffddb8',
+              primary: '#006948',
+              'on-primary-fixed-variant': '#005137',
+              'surface-container': '#eaedff',
+              'surface-bright': '#faf8ff',
+              'on-primary-container': '#f5fff7',
+              'on-surface-variant': '#3d4a42',
+            },
+            borderRadius: { DEFAULT: '0.25rem', lg: '0.5rem', xl: '0.75rem', full: '9999px' },
+            spacing: {
+              gutter: '1.5rem',
+              'space-2xl': '4rem',
+              'space-md': '1rem',
+              'gutter-mobile': '1rem',
+              'space-lg': '1.5rem',
+              'space-sm': '0.5rem',
+              'space-xl': '2.5rem',
+              'margin-mobile': '1.25rem',
+              margin: '2rem',
+              'space-xs': '0.25rem',
+            },
+            fontFamily: {
+              'body-lg': ['Inter'],
+              'headline-lg': ['Plus Jakarta Sans'],
+              'body-md': ['Inter'],
+              'label-lg': ['Plus Jakarta Sans'],
+              'headline-sm': ['Plus Jakarta Sans'],
+              'metric-display': ['Plus Jakarta Sans'],
+              'label-md': ['Plus Jakarta Sans'],
+              'display-hero': ['Plus Jakarta Sans'],
+              'label-sm': ['Plus Jakarta Sans'],
+              'metric-display-mobile': ['Plus Jakarta Sans'],
+              'body-sm': ['Inter'],
+              'headline-md': ['Plus Jakarta Sans'],
+              'headline-lg-mobile': ['Plus Jakarta Sans'],
+              'display-hero-mobile': ['Plus Jakarta Sans'],
+            },
+            fontSize: {
+              'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
+              'headline-lg': ['40px', { lineHeight: '48px', letterSpacing: '-0.025em', fontWeight: '700' }],
+              'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+              'label-lg': ['16px', { lineHeight: '20px', letterSpacing: '-0.01em', fontWeight: '600' }],
+              'headline-sm': ['20px', { lineHeight: '28px', letterSpacing: '-0.01em', fontWeight: '600' }],
+              'metric-display': ['48px', { lineHeight: '52px', letterSpacing: '-0.03em', fontWeight: '800' }],
+              'label-md': ['14px', { lineHeight: '18px', letterSpacing: '0em', fontWeight: '600' }],
+              'display-hero': ['56px', { lineHeight: '64px', letterSpacing: '-0.03em', fontWeight: '800' }],
+              'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.04em', fontWeight: '700' }],
+              'metric-display-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.02em', fontWeight: '800' }],
+              'body-sm': ['14px', { lineHeight: '20px', fontWeight: '400' }],
+              'headline-md': ['28px', { lineHeight: '36px', letterSpacing: '-0.015em', fontWeight: '700' }],
+              'headline-lg-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.02em', fontWeight: '700' }],
+              'display-hero-mobile': ['36px', { lineHeight: '42px', letterSpacing: '-0.02em', fontWeight: '800' }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-surface font-body-md text-on-surface antialiased">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+      <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3 shrink-0">
+          <img
+            alt="iGreen Energy Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1UZ9eg9AkMsLTqU9GLSfnQAzFfhAJUZqWSM4Y6ViT90NtSNMSi2qSmd7J8z6WjmgpiUERtnI9T2WOWFmamGb3vaicCsWky8TR_aOnZlxzD2brEC4xvf_n1wxpmfBjj30aQvcVf0FEkwzbz7xoo61AOnoapRjbrRTPAC-Y54b-FnWW7nb2Fud1m4XHAR2O-uBTzpbVSL3DLb1Qn71orvNUMSHJ3rnV7WBzC3PUSEMTymCQ"
+          />
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight hidden sm:inline leading-none">iGreen Energy</span
+            ><span class="font-label-sm text-[11px] text-tertiary font-semibold tracking-wide uppercase mt-0.5">Consultor Licenciado Autorizado</span>
+          </div>
+        </div>
+        <nav class="hidden xl:flex items-center gap-6" data-active-classes="text-primary font-bold">
+          <a aria-current="page" class="transition-colors text-primary font-bold" data-path="como-funciona" href="#como-funciona">Como Funciona</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="vantagens"
+            href="#vantagens"
+            >Vantagens</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="simulador-de-economia"
+            href="#simulador"
+            >Simulador</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="sustentabilidade"
+            href="#sustentabilidade"
+            >Sustentabilidade</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="depoimentos"
+            href="#depoimentos"
+            >Depoimentos</a
+          ><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="duvidas" href="#duvidas"
+            >Dúvidas</a
+          >
+        </nav>
+        <div class="flex items-center gap-3 shrink-0">
+          <a
+            class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-[0_4px_16px_rgba(0,105,72,0.2)] hover:shadow-[0_6px_20px_rgba(0,105,72,0.3)]"
+            href="#cadastro"
+            ><span class="material-symbols-outlined text-[18px]">chat</span><span class="">Falar com Consultor</span></a
+          >
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-20 bg-surface">
+      <div class="flex flex-col w-full">
+        <!-- SECTION 1: HERO SECTION -->
+        <section class="relative w-full bg-gradient-to-b from-surface via-surface-container-low to-surface overflow-hidden py-12 lg:py-20">
+          <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+              <!-- Left Column: Copy & Value Proposition -->
+              <div class="lg:col-span-7 flex flex-col items-start gap-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant shadow-sm">
+                  <span class="material-symbols-outlined text-[18px]">verified</span
+                  ><span class="font-label-sm text-label-sm uppercase tracking-wider">Consultor Licenciado Independente • Lei 14.300/2022</span>
+                </div>
+                <h1 class="font-display-hero text-display-hero text-on-surface tracking-tight">
+                  Economize até <span class="text-primary underline decoration-secondary-container decoration-4 underline-offset-8">30%</span> na sua
+                  conta de luz com atendimento exclusivo.
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                  Sou seu Consultor Autorizado iGreen Energy. Te ajudo a conectar sua residência ou empresa à energia solar por assinatura, sem obras
+                  no telhado, sem taxa de adesão e com desconto garantido todo mês direto na sua conta.
+                </p>
+                <div class="flex flex-wrap items-center gap-2.5 pt-1">
+                  <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface">
+                    <span class="material-symbols-outlined text-[16px] text-primary">support_agent</span
+                    ><span class="font-label-md text-label-md">Suporte direto via WhatsApp</span>
+                  </div>
+                  <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface">
+                    <span class="material-symbols-outlined text-[16px] text-primary">check_circle</span
+                    ><span class="font-label-md text-label-md">Sem fidelidade e sem obras</span>
+                  </div>
+                  <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface">
+                    <span class="material-symbols-outlined text-[16px] text-primary">check_circle</span
+                    ><span class="font-label-md text-label-md">100% Digital e Regulamentado</span>
+                  </div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto pt-2">
+                  <a
+                    class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-xl hover:shadow-2xl transition-all"
+                    href="#cadastro"
+                    ><span class="material-symbols-outlined text-[20px]">chat</span>Falar com o Consultor no WhatsApp</a
+                  ><a
+                    class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-lg text-label-lg transition-colors"
+                    href="#simulador"
+                    ><span class="material-symbols-outlined text-[20px]">calculate</span>Simular Minha Economia</a
+                  >
+                </div>
+                <div class="flex items-center gap-3 pt-3">
+                  <div class="flex text-secondary-container">
+                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1">star</span
+                    ><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1">star</span
+                    ><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1">star</span
+                    ><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1">star</span
+                    ><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1">star</span>
+                  </div>
+                  <p class="font-label-md text-label-md text-on-surface-variant font-medium">
+                    Assessoria dedicada para clientes em todo o território nacional
+                  </p>
+                </div>
+              </div>
+              <!-- Right Column: Hero Visual Showcase (Image 14 - Happy Family with App) -->
+              <div class="lg:col-span-5 relative">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-surface-container">
+                  <img
+                    alt="Família brasileira comemorando a economia na conta de luz via app iGreen"
+                    class="w-full h-[520px] object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb2W0mdW532bHcRH9gskHPXooS3V-GyIAm8UFEeod4Y10KfLfnpyI_AxcxO9HbCN_pxrEWwNn2vBWusACaKYlc93ZjvSZDUXZJO2E47410SvrDai9uCXrk2pCQcsCWdpNyRYBo-4XmDSYO_1JUxPCJsFfkY2HUxvgavxkGaZDrD-pidP-EnGJVc2YGdZyHvVH-tT1yVQKyIxcLyY3sTbVRiDVwcT99myH8eP5zXJ--"
+                  />
+                  <!-- Gradient Overlay Scrim for text readability -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+                  <!-- Floating Metrics Card Top Left -->
+                  <div
+                    class="absolute top-6 left-6 p-4 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md shadow-lg flex items-center gap-3 max-w-[260px]"
+                  >
+                    <div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-on-tertiary-fixed text-[22px]">trending_down</span>
+                    </div>
+                    <div>
+                      <p class="font-label-sm text-label-sm text-on-surface-variant">Economia Garantida</p>
+                      <p class="font-headline-sm text-headline-sm text-primary font-bold">Até -30% na Fatura</p>
+                    </div>
+                  </div>
+                  <!-- Floating Metric Overlay Bottom -->
+                  <div
+                    class="absolute bottom-6 inset-x-6 p-5 rounded-2xl bg-surface-container-lowest/95 backdrop-blur-xl shadow-xl flex items-center justify-between gap-4"
+                  >
+                    <div class="space-y-0.5">
+                      <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">Economia Média Familiar</span>
+                      <p class="font-headline-md text-headline-md text-primary font-bold">R$ 2.400 / ano</p>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">Créditos de energia solar limpa direto na conta</p>
+                    </div>
+                    <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-primary text-[28px]">eco</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 2: METRICS & TRUST BAR -->
+        <section class="w-full bg-primary text-on-primary py-12">
+          <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+              <div class="flex flex-col items-start gap-1">
+                <div class="flex items-center gap-2 text-primary-fixed">
+                  <span class="material-symbols-outlined text-[24px]">solar_power</span>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider">Energia Limpa</span>
+                </div>
+                <p class="font-metric-display text-metric-display font-extrabold text-on-primary tracking-tight">+50M</p>
+                <p class="font-body-sm text-body-sm text-primary-fixed/80">kWh de energia solar fotovoltaica injetados na rede</p>
+              </div>
+              <div class="flex flex-col items-start gap-1">
+                <div class="flex items-center gap-2 text-secondary-container">
+                  <span class="material-symbols-outlined text-[24px]">savings</span>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider">Economia Direta</span>
+                </div>
+                <p class="font-metric-display text-metric-display font-extrabold text-on-primary tracking-tight">Até 30%</p>
+                <p class="font-body-sm text-body-sm text-primary-fixed/80">De redução sem gastar 1 centavo em obras ou placas</p>
+              </div>
+              <div class="flex flex-col items-start gap-1">
+                <div class="flex items-center gap-2 text-tertiary-fixed">
+                  <span class="material-symbols-outlined text-[24px]">grid_view</span>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider">Infraestrutura</span>
+                </div>
+                <p class="font-metric-display text-metric-display font-extrabold text-on-primary tracking-tight">+120</p>
+                <p class="font-body-sm text-body-sm text-primary-fixed/80">Fazendas solares conectadas em vários estados do Brasil</p>
+              </div>
+              <div class="flex flex-col items-start gap-1">
+                <div class="flex items-center gap-2 text-primary-fixed">
+                  <span class="material-symbols-outlined text-[24px]">forest</span>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider">Compromisso ESG</span>
+                </div>
+                <p class="font-metric-display text-metric-display font-extrabold text-on-primary tracking-tight">45.000 t</p>
+                <p class="font-body-sm text-body-sm text-primary-fixed/80">De CO₂ evitadas na atmosfera com nossas operações</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 3: SIMULADOR INTERATIVO DE ECONOMIA -->
+        <section class="w-full bg-surface-container-low py-20" id="simulador">
+          <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+                <span class="material-symbols-outlined text-[16px]">calculate</span>
+                <span class="font-label-sm text-label-sm uppercase">Simulador de Economia iGreen</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface">Descubra quanto você vai poupar todo mês</h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Arraste o valor da sua conta atual ou selecione um valor aproximado para calcular a sua redução imediata.
+              </p>
+            </div>
+            <!-- Main Calculator Card -->
+            <div class="bg-surface-container-lowest rounded-3xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
+              <!-- Controls Column -->
+              <div class="lg:col-span-7 p-8 lg:p-12 space-y-8 flex flex-col justify-between">
+                <div class="space-y-6">
+                  <!-- Account Category Switcher -->
+                  <div class="flex items-center gap-2 p-1.5 bg-surface-container rounded-full w-full sm:w-fit">
+                    <button
+                      class="calc-type-btn flex-1 sm:flex-initial px-6 py-2.5 rounded-full font-label-md text-label-md transition-all bg-primary text-on-primary shadow-sm"
+                      id="btn-residential"
+                      onclick="setProfile('residential')"
+                      type="button"
+                    >
+                      Residencial (CPF)
+                    </button>
+                    <button
+                      class="calc-type-btn flex-1 sm:flex-initial px-6 py-2.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all"
+                      id="btn-commercial"
+                      onclick="setProfile('commercial')"
+                      type="button"
+                    >
+                      Empresarial / Comercial (CNPJ)
+                    </button>
+                  </div>
+                  <!-- Value Display & Slider -->
+                  <div class="space-y-3">
+                    <div class="flex items-baseline justify-between">
+                      <label class="font-label-md text-label-md text-on-surface-variant" for="bill-slider">
+                        Quanto você paga de conta de luz hoje?
+                      </label>
+                      <div class="flex items-baseline gap-1 text-primary">
+                        <span class="font-headline-sm text-headline-sm font-semibold">R$</span>
+                        <span class="font-metric-display text-metric-display font-extrabold" id="bill-display-val">350</span>
+                      </div>
+                    </div>
+                    <!-- Input Range Slider -->
+                    <input
+                      class="w-full h-3 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-primary"
+                      id="bill-slider"
+                      max="10000"
+                      min="200"
+                      oninput="updateCalculation(this.value)"
+                      step="50"
+                      type="range"
+                      value="1000"
+                    />
+                    <div class="flex justify-between font-label-sm text-label-sm text-outline">
+                      <span class="">R$ 200/mês</span>
+                      <span class="">R$ 5.000/mês</span>
+                      <span class="">R$ 10.000+/mês</span>
+                    </div>
+                  </div>
+                  <!-- Quick Preset Chips -->
+                  <div class="space-y-2">
+                    <span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">Valores Frequentes:</span>
+                    <div class="flex flex-wrap gap-2">
+                      <button
+                        class="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors"
+                        onclick="setPreset(300)"
+                        type="button"
+                      >
+                        R$ 300
+                      </button>
+                      <button
+                        class="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors"
+                        onclick="setPreset(500)"
+                        type="button"
+                      >
+                        R$ 500
+                      </button>
+                      <button
+                        class="px-4 py-2 rounded-xl bg-primary-fixed text-on-primary-fixed font-label-md text-label-md font-bold transition-colors"
+                        onclick="setPreset(1000)"
+                        type="button"
+                      >
+                        R$ 1.000
+                      </button>
+                      <button
+                        class="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors"
+                        onclick="setPreset(2500)"
+                        type="button"
+                      >
+                        R$ 2.500
+                      </button>
+                      <button
+                        class="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors"
+                        onclick="setPreset(5000)"
+                        type="button"
+                      >
+                        R$ 5.000
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="pt-6 flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm">
+                  <span class="material-symbols-outlined text-primary text-[20px]">info</span>
+                  <span class=""
+                    >Cálculo aproximado baseado na regulação da GD. Seu consultor licenciado analisará a fatura exata para maximizar o desconto.</span
+                  >
+                </div>
+              </div>
+              <!-- Dynamic Output Column -->
+              <div
+                class="lg:col-span-5 bg-gradient-to-br from-primary to-tertiary-container p-8 lg:p-12 text-on-primary flex flex-col justify-between"
+              >
+                <div class="space-y-6">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed">Resultado Estimado</span>
+                    <span class="px-3 py-1 rounded-full bg-surface-container-lowest/20 text-on-primary font-label-sm text-label-sm"
+                      >Desconto Garantido</span
+                    >
+                  </div>
+                  <!-- Savings Numbers -->
+                  <div class="space-y-4">
+                    <div class="p-4 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-sm">
+                      <span class="font-label-md text-label-md text-primary-fixed block">Economia Mensal Estimada</span>
+                      <p class="font-metric-display text-metric-display text-on-primary font-extrabold flex items-baseline gap-1">
+                        <span class="">R$</span>
+                        <span id="res-monthly" class="">52,50</span>
+                      </p>
+                      <p class="font-body-sm text-body-sm text-primary-fixed/80">Descontado diretamente da sua fatura habitual</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-sm">
+                      <span class="font-label-md text-label-md text-primary-fixed block">Economia Anual Acumulada</span>
+                      <p class="font-headline-lg text-headline-lg text-secondary-container font-extrabold flex items-baseline gap-1">
+                        <span class="">R$</span>
+                        <span id="res-annual" class="">630,00</span>
+                      </p>
+                      <p class="font-body-sm text-body-sm text-primary-fixed/80">Dinheiro livre no seu bolso sem nenhum investimento</p>
+                    </div>
+                  </div>
+                  <!-- ESG Environmental Proof -->
+                  <div class="flex items-center gap-4 p-3 rounded-xl bg-surface-container-lowest/10">
+                    <div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-on-tertiary-fixed text-[20px]">nature</span>
+                    </div>
+                    <div class="font-body-sm text-body-sm">
+                      <p class="font-semibold text-on-primary"><span id="res-trees" class="">6</span> árvores preservadas por ano</p>
+                      <p class="text-primary-fixed/80">Equivalente a <span id="res-co2" class="">422</span> kg de CO₂ neutralizados</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Simulator Action CTA -->
+                <div class="pt-8">
+                  <a
+                    class="w-full inline-flex items-center justify-center gap-2 py-4 px-6 rounded-full bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-label-lg text-label-lg font-bold transition-all shadow-lg hover:shadow-xl"
+                    href="#cadastro"
+                    ><span class="">Solicitar Proposta com o Consultor</span><span class="material-symbols-outlined text-[20px]">chat</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 4: COMO FUNCIONA (GERAÇÃO COMPARTILHADA) -->
+        <section class="w-full bg-surface py-20" id="como-funciona">
+          <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-primary">
+                <span class="material-symbols-outlined text-[16px]">sync_alt</span>
+                <span class="font-label-sm text-label-sm uppercase">Entenda o Processo</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface">Como a energia solar chega até você sem obras</h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Através do Marco Legal da Geração Distribuída (GD), você consome a energia produzida em nossas usinas solares de grande porte.
+              </p>
+            </div>
+            <!-- 4-Step Visual Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+              <!-- Step 1 -->
+              <div
+                class="p-6 rounded-3xl bg-surface-container-low flex flex-col justify-between space-y-4 shadow-sm relative group hover:bg-surface-container transition-colors"
+              >
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="w-10 h-10 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm font-bold flex items-center justify-center"
+                      >01</span
+                    >
+                    <span class="material-symbols-outlined text-[32px] text-primary">wb_sunny</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Geração Sustentável</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    A iGreen gera energia limpa nas fazendas solares fotovoltaicas credenciadas de alta performance espalhadas pelo país.
+                  </p>
+                </div>
+                <div class="pt-2 text-primary font-label-sm text-label-sm flex items-center gap-1">
+                  <span class="">Usinas homologadas</span>
+                  <span class="material-symbols-outlined text-[14px]">arrow_right_alt</span>
+                </div>
+              </div>
+              <!-- Step 2 -->
+              <div
+                class="p-6 rounded-3xl bg-surface-container-low flex flex-col justify-between space-y-4 shadow-sm relative group hover:bg-surface-container transition-colors"
+              >
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="w-10 h-10 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm font-bold flex items-center justify-center"
+                      >02</span
+                    >
+                    <span class="material-symbols-outlined text-[32px] text-primary">power</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Injeção na Rede</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    A energia gerada é injetada na rede da sua distribuidora local (Cemig, Enel, CPFL, Neoenergia, etc.) sem interrupções.
+                  </p>
+                </div>
+                <div class="pt-2 text-primary font-label-sm text-label-sm flex items-center gap-1">
+                  <span class="">Rede oficial pública</span>
+                  <span class="material-symbols-outlined text-[14px]">arrow_right_alt</span>
+                </div>
+              </div>
+              <!-- Step 3 -->
+              <div
+                class="p-6 rounded-3xl bg-surface-container-low flex flex-col justify-between space-y-4 shadow-sm relative group hover:bg-surface-container transition-colors"
+              >
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="w-10 h-10 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm font-bold flex items-center justify-center"
+                      >03</span
+                    >
+                    <span class="material-symbols-outlined text-[32px] text-primary">receipt_long</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Créditos de Energia</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    A distribuidora transforma a energia recebida em créditos solares compensados diretamente na sua fatura mensal.
+                  </p>
+                </div>
+                <div class="pt-2 text-primary font-label-sm text-label-sm flex items-center gap-1">
+                  <span class="">Conversão automática</span>
+                  <span class="material-symbols-outlined text-[14px]">arrow_right_alt</span>
+                </div>
+              </div>
+              <!-- Step 4 -->
+              <div
+                class="p-6 rounded-3xl bg-surface-container-low flex flex-col justify-between space-y-4 shadow-sm relative group hover:bg-surface-container transition-colors"
+              >
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="w-10 h-10 rounded-full bg-tertiary text-on-tertiary font-headline-sm text-headline-sm font-bold flex items-center justify-center"
+                      >04</span
+                    >
+                    <span class="material-symbols-outlined text-[32px] text-tertiary">price_check</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Desconto na Fatura</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    Você paga menos todo mês sem precisar furar o telhado, sem manutenção e sem gastar 1 centavo com equipamentos.
+                  </p>
+                </div>
+                <div class="pt-2 text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+                  <span class="">Economia no bolso</span>
+                  <span class="material-symbols-outlined text-[14px]">check</span>
+                </div>
+              </div>
+            </div>
+            <!-- Distributor Logos Bar -->
+            <div
+              class="mt-14 p-6 rounded-2xl bg-surface-container flex flex-wrap items-center justify-center gap-8 md:gap-14 text-on-surface-variant"
+            >
+              <span class="font-label-md text-label-md font-semibold text-on-surface">Compatível com as principais distribuidoras:</span>
+              <span class="font-headline-sm text-headline-sm font-bold tracking-tight">CEMIG</span>
+              <span class="font-headline-sm text-headline-sm font-bold tracking-tight">CPFL</span>
+              <span class="font-headline-sm text-headline-sm font-bold tracking-tight">ENEL</span>
+              <span class="font-headline-sm text-headline-sm font-bold tracking-tight">NEOENERGIA</span>
+              <span class="font-headline-sm text-headline-sm font-bold tracking-tight">EQUATORIAL</span>
+              <span class="font-headline-sm text-headline-sm font-bold tracking-tight">COPEL</span>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 5: VANTAGENS EXCLUSIVAS (COMPARATIVO DIRETO) -->
+        <section class="w-full bg-surface-container-low py-20" id="vantagens">
+          <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+                <span class="material-symbols-outlined text-[16px]">balance</span>
+                <span class="font-label-sm text-label-sm uppercase">Comparação Real</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface">Por que a assinatura iGreen é infinitamente mais inteligente?</h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Compare as vantagens da Conexão Green em relação ao modelo antigo de compra e instalação de placas solares.
+              </p>
+            </div>
+            <!-- Comparison Cards Bento -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <!-- iGreen Model (The Winner) -->
+              <div
+                class="p-8 lg:p-10 rounded-3xl bg-surface-container-lowest shadow-xl flex flex-col justify-between space-y-6 relative overflow-hidden"
+              >
+                <div
+                  class="absolute top-0 right-0 bg-primary text-on-primary px-6 py-2 rounded-bl-2xl font-label-sm text-label-sm uppercase font-bold tracking-wider"
+                >
+                  Recomendado
+                </div>
+                <div class="space-y-6">
+                  <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-2xl bg-tertiary-fixed flex items-center justify-center">
+                      <span class="material-symbols-outlined text-on-tertiary-fixed text-[26px]">eco</span>
+                    </div>
+                    <div>
+                      <h3 class="font-headline-md text-headline-md text-primary font-bold">Com a iGreen Energy</h3>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">Assinatura Solar por Compartilhamento</p>
+                    </div>
+                  </div>
+                  <ul class="space-y-4 pt-2">
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+                      <div>
+                        <strong class="font-label-md text-label-md text-on-surface block">Custo de Instalação: R$ 0,00</strong>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant"
+                          >Zero investimento inicial. Não compre placas, baterias nem inversores.</span
+                        >
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+                      <div>
+                        <strong class="font-label-md text-label-md text-on-surface block">Risco de Quebra &amp; Manutenção: Zero</strong>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant"
+                          >Chuva de granizo, defeitos ou desgaste são 100% responsabilidade das usinas iGreen.</span
+                        >
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+                      <div>
+                        <strong class="font-label-md text-label-md text-on-surface block">Burocracia: 100% Online em 3 minutos</strong>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant"
+                          >Apenas envie sua fatura pelo celular. Sem visitas técnicas ou engenheiros no telhado.</span
+                        >
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+                      <div>
+                        <strong class="font-label-md text-label-md text-on-surface block">Mora de Aluguel ou em Apartamento? Funciona!</strong>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant"
+                          >Perfeito para qualquer tipo de imóvel residencial ou comercial sem telhado próprio.</span
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="pt-4">
+                  <a
+                    class="w-full inline-flex items-center justify-center py-3.5 px-6 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-md"
+                    href="#cadastro"
+                  >
+                    Aderir Sem Investimento
+                  </a>
+                </div>
+              </div>
+              <!-- Traditional Model (The Problem) -->
+              <div class="p-8 lg:p-10 rounded-3xl bg-surface-container shadow-sm flex flex-col justify-between space-y-6 opacity-90">
+                <div class="space-y-6">
+                  <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center">
+                      <span class="material-symbols-outlined text-outline text-[26px]">home_repair_service</span>
+                    </div>
+                    <div>
+                      <h3 class="font-headline-md text-headline-md text-on-surface font-bold">Instalação Tradicional</h3>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">Aquisição e Compra de Placas Solares</p>
+                    </div>
+                  </div>
+                  <ul class="space-y-4 pt-2">
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">cancel</span>
+                      <div>
+                        <strong class="font-label-md text-label-md text-on-surface block">Custo Alto: R$ 25.000 a R$ 45.000</strong>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant"
+                          >Endividamento com financiamentos bancários e juros elevados.</span
+                        >
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">cancel</span>
+                      <div>
+                        <strong class="font-label-md text-label-md text-on-surface block">Manutenção por sua conta</strong>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant"
+                          >Limpeza periódica de módulos, queima de inversor e riscos de vazamentos no telhado.</span
+                        >
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">cancel</span>
+                      <div>
+                        <strong class="font-label-md text-label-md text-on-surface block">Processos lentos e homologação demorada</strong>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant"
+                          >Meses aguardando vistoria da concessionária e aprovação de projetos técnicos.</span
+                        >
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">cancel</span>
+                      <div>
+                        <strong class="font-label-md text-label-md text-on-surface block">Inviável para Imóveis Alugados</strong>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant"
+                          >Quem mora de aluguel ou em apartamento fica completamente de fora dessa economia.</span
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="pt-4 p-4 rounded-xl bg-surface-container-high text-on-surface-variant font-body-sm text-body-sm text-center">
+                  Evite dívidas desnecessárias e dores de cabeça estruturais.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 6: SUSTENTABILIDADE & COMPROMISSO ESG (Image 13 - Solar Farm) -->
+        <section class="w-full bg-surface py-20" id="sustentabilidade">
+          <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <!-- Left Image: Solar Farm Drone Shot (Image 13) -->
+              <div class="lg:col-span-6 relative">
+                <div class="rounded-3xl overflow-hidden shadow-2xl relative">
+                  <img
+                    alt="Fazenda de energia solar fotovoltaica iGreen Energy cercada pela natureza no Brasil"
+                    class="w-full h-[460px] object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuASwsGwU31Jy4VDZ-LCmoqNRIYw2wrWR49gg_HDTQjzwLARQTUq1owKu4HOKoTe2JX7MrI2Fa-jNjU3u1IvSG3y51rDRiDHndGg9n_hUhMk6MDq3XuHMq5XinaNymVoDUdMEpuI_jhff0E6uQDuo0J62bwBvPG2Kg6Px4qxaj5LQwxcXvQA-XNvGv9Wt5_xK746nLMYxRLPs-mMduWka6e4rzmE_eQ5G1Aa6addpxIK"
+                  />
+                  <div
+                    class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md shadow-lg flex items-center gap-3"
+                  >
+                    <span class="material-symbols-outlined text-primary text-[28px]">eco</span>
+                    <div>
+                      <p class="font-label-md text-label-md text-on-surface font-semibold">Parque Solar Fotovoltaico Conexão Green</p>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">Matriz 100% limpa, silenciosa e renovável no interior do Brasil</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Right Content: ESG Storytelling -->
+              <div class="lg:col-span-6 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant shadow-sm">
+                  <span class="material-symbols-outlined text-[18px]">nature_people</span>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider">Sustentabilidade &amp; ESG</span>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">O futuro sustentável do Brasil construído em conjunto</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">
+                  Ao assinar a iGreen, você não está apenas reduzindo despesas mensais; você está ativamente incentivando a matriz fotovoltaica
+                  nacional e evitando a emissão de poluentes de usinas termelétricas de combustível fóssil.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                  <div class="p-4 rounded-2xl bg-surface-container-low space-y-1">
+                    <div class="flex items-center gap-2 text-primary font-bold">
+                      <span class="material-symbols-outlined text-[20px]">co2</span>
+                      <span class="font-label-md text-label-md">Créditos de Carbono</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Compensação autêntica de pegada ambiental atestada para a sua casa ou empresa.
+                    </p>
+                  </div>
+                  <div class="p-4 rounded-2xl bg-surface-container-low space-y-1">
+                    <div class="flex items-center gap-2 text-secondary font-bold">
+                      <span class="material-symbols-outlined text-[20px]">workspace_premium</span>
+                      <span class="font-label-md text-label-md">Selo Empresa Verde</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Certificação digital para negócios que valorizam a responsabilidade socioambiental.
+                    </p>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <a
+                    class="inline-flex items-center gap-2 font-label-lg text-label-lg text-primary hover:text-primary-container font-semibold transition-colors"
+                    href="#simulador"
+                  >
+                    <span class="">Faça parte da transição energética</span>
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 7: DEPOIMENTOS REAIS -->
+        <section class="w-full bg-surface-container-low py-20" id="depoimentos">
+          <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-primary">
+                <span class="material-symbols-outlined text-[16px]">reviews</span>
+                <span class="font-label-sm text-label-sm uppercase">Experiências Verificadas</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface">Quem já mudou para a Conexão Green aprova</h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Histórias de clientes residenciais e empresariais de todo o Brasil que já comemoram a redução real na conta.
+              </p>
+            </div>
+            <!-- Testimonial Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Card 1 -->
+              <div class="p-8 rounded-3xl bg-surface-container-lowest shadow-md flex flex-col justify-between space-y-6">
+                <div class="space-y-4">
+                  <div class="flex text-secondary-container">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface italic">
+                    "Tenho uma padaria e a eletricidade dos fornos e câmaras frias era meu maior pesadelo. Reduzi mais de R$ 900 por mês no custo
+                    operacional logo no segundo ciclo. Sem gastar 1 centavo com placas!"
+                  </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-transparent">
+                  <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-primary">CM</div>
+                  <div>
+                    <p class="font-label-md text-label-md text-on-surface font-bold">Carlos M.</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Padaria Artesanal • Belo Horizonte / MG</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="p-8 rounded-3xl bg-surface-container-lowest shadow-md flex flex-col justify-between space-y-6">
+                <div class="space-y-4">
+                  <div class="flex text-secondary-container">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface italic">
+                    "Moro de aluguel num apartamento em Campinas e nunca imaginei que pudesse ter energia solar. O cadastro demorou 5 minutos pelo
+                    WhatsApp e o desconto veio certinho discriminado na conta da CPFL."
+                  </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-transparent">
+                  <div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-secondary">MS</div>
+                  <div>
+                    <p class="font-label-md text-label-md text-on-surface font-bold">Mariana S.</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Residencial Alugado • Campinas / SP</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="p-8 rounded-3xl bg-surface-container-lowest shadow-md flex flex-col justify-between space-y-6">
+                <div class="space-y-4">
+                  <div class="flex text-secondary-container">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1">star</span>
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface italic">
+                    "Estava desconfiado no começo porque parece bom demais pra ser verdade. Mas quando vi a chancela da Copel e da ANEEL, fechei.
+                    Economizamos quase R$ 2.000 no ano em casa. Recomendo para toda família."
+                  </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-transparent">
+                  <div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center font-bold text-tertiary">RF</div>
+                  <div>
+                    <p class="font-label-md text-label-md text-on-surface font-bold">Roberto F.</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Residência Familiar • Curitiba / PR</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 8: FAQ ACCORDION -->
+        <section class="w-full bg-surface py-20" id="duvidas">
+          <div class="max-w-4xl mx-auto px-6 lg:px-12">
+            <div class="text-center space-y-4 mb-16">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-primary">
+                <span class="material-symbols-outlined text-[16px]">help</span>
+                <span class="font-label-sm text-label-sm uppercase">Tire suas Dúvidas</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface">Perguntas Frequentes sobre a Conexão Green</h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">Transparência radical em cada etapa da sua economia de energia.</p>
+            </div>
+            <!-- Accordion Items -->
+            <div class="space-y-4">
+              <!-- FAQ Item 1 -->
+              <div class="p-6 rounded-2xl bg-surface-container-low shadow-sm">
+                <details class="group cursor-pointer">
+                  <summary
+                    class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-semibold list-none select-none"
+                  >
+                    <span class="">Preciso fazer alguma obra ou instalar placas na minha casa ou empresa?</span>
+                    <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                  </summary>
+                  <p class="font-body-md text-body-md text-on-surface-variant pt-4">
+                    <strong>Não, absolutamente nada!</strong> Você não precisa comprar placas fotovoltaicas, inversores ou furar telhados. A energia
+                    solar é gerada em nossas fazendas solares e injetada na rede da distribuidora pública que já atende o seu imóvel.
+                  </p>
+                </details>
+              </div>
+              <!-- FAQ Item 2 -->
+              <div class="p-6 rounded-2xl bg-surface-container-low shadow-sm">
+                <details class="group cursor-pointer">
+                  <summary
+                    class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-semibold list-none select-none"
+                  >
+                    <span class="">Tenho que pagar alguma taxa de adesão ou existe fidelidade contratual?</span>
+                    <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                  </summary>
+                  <p class="font-body-md text-body-md text-on-surface-variant pt-4">
+                    Zero taxa de adesão e <strong>sem carência ou fidelidade forçada</strong>. Você só paga pela energia consumida já com o desconto
+                    aplicado. Se por qualquer motivo você desejar cancelar, pode solicitar a qualquer momento sem multas rescisórias.
+                  </p>
+                </details>
+              </div>
+              <!-- FAQ Item 3 -->
+              <div class="p-6 rounded-2xl bg-surface-container-low shadow-sm">
+                <details class="group cursor-pointer">
+                  <summary
+                    class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-semibold list-none select-none"
+                  >
+                    <span class="">O que acontece se chover muito ou faltar sol? Fico sem energia?</span>
+                    <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                  </summary>
+                  <p class="font-body-md text-body-md text-on-surface-variant pt-4">
+                    <strong>Jamais!</strong> A segurança do seu abastecimento elétrico permanece sob a custódia da concessionária local (Cemig, Enel,
+                    CPFL, etc.). Nossas usinas possuem capacidade compensatória distribuída. A luz da sua casa ou empresa nunca cai por questões
+                    solares.
+                  </p>
+                </details>
+              </div>
+              <!-- FAQ Item 4 -->
+              <div class="p-6 rounded-2xl bg-surface-container-low shadow-sm">
+                <details class="group cursor-pointer">
+                  <summary
+                    class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-semibold list-none select-none"
+                  >
+                    <span class="">Quais distribuidoras e regiões já atendem a Conexão Green?</span>
+                    <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                  </summary>
+                  <p class="font-body-md text-body-md text-on-surface-variant pt-4">
+                    A iGreen atende as principais áreas de concessão de Minas Gerais (Cemig), São Paulo (CPFL Paulista/Piratininga, Enel), Paraná
+                    (Copel), Rio de Janeiro (Light/Enel), Nordeste (Neoenergia/Equatorial) e expansão contínua em todo o território nacional.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 9: FINAL HIGH-CONVERSION CTA & FORM -->
+        <section
+          class="w-full bg-gradient-to-br from-primary via-tertiary-container to-primary text-on-primary py-20 relative overflow-hidden"
+          id="cadastro"
+        >
+          <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <div class="lg:col-span-6 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container">
+                  <span class="material-symbols-outlined text-[18px]">support_agent</span
+                  ><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Atendimento Personalizado com Consultor</span>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg text-on-primary font-extrabold leading-tight">
+                  Receba sua análise gratuita de redução de conta agora mesmo.
+                </h2>
+                <p class="font-body-lg text-body-lg text-primary-fixed/90 max-w-lg">
+                  Preencha os dados ao lado para ser atendido diretamente no WhatsApp pelo seu Consultor Licenciado iGreen Energy. Faço a simulação
+                  exata para sua distribuidora sem custo algum.
+                </p>
+                <div class="space-y-3 pt-2">
+                  <div class="flex items-center gap-3 text-primary-fixed">
+                    <span class="material-symbols-outlined text-[20px]">check_circle</span
+                    ><span class="font-body-md text-body-md">Atendimento direto, humanizado e ágil no WhatsApp</span>
+                  </div>
+                  <div class="flex items-center gap-3 text-primary-fixed">
+                    <span class="material-symbols-outlined text-[20px]">check_circle</span
+                    ><span class="font-body-md text-body-md">Sem taxas de adesão, obras ou risco</span>
+                  </div>
+                  <div class="flex items-center gap-3 text-primary-fixed">
+                    <span class="material-symbols-outlined text-[20px]">check_circle</span
+                    ><span class="font-body-md text-body-md">Orientação transparente sobre sua fatura</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-6">
+                <div class="p-8 sm:p-10 rounded-3xl bg-surface-container-lowest text-on-surface shadow-2xl space-y-6">
+                  <div class="space-y-1">
+                    <div class="inline-flex items-center gap-1.5 text-primary font-label-sm text-label-sm font-semibold">
+                      <span class="material-symbols-outlined text-[18px]">verified</span>Consultor Licenciado Independente
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Fale com seu Consultor iGreen</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Preencha os dados para abrir a conversa no WhatsApp com sua simulação pronta:
+                    </p>
+                  </div>
+                  <form class="space-y-4" id="lead-form" onsubmit="enviarWhatsApp(event)">
+                    <div>
+                      <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1" for="lead-name"
+                        >Seu Nome Completo</label
+                      ><input
+                        class="w-full px-4 py-3.5 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary font-body-md text-body-md transition-all"
+                        id="lead-name"
+                        placeholder="Ex: Maria Oliveira"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                    <div>
+                      <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1" for="lead-whatsapp"
+                        >Seu WhatsApp com DDD</label
+                      ><input
+                        class="w-full px-4 py-3.5 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary font-body-md text-body-md transition-all"
+                        id="lead-whatsapp"
+                        placeholder="(11) 99999-9999"
+                        required=""
+                        type="tel"
+                      />
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1" for="lead-state"
+                          >Estado / Concessionária</label
+                        ><select
+                          class="w-full px-4 py-3.5 rounded-xl bg-surface-container-low text-on-surface focus:outline-none focus:ring-2 focus:ring-primary font-body-md text-body-md transition-all"
+                          id="lead-state"
+                          required=""
+                        >
+                          <option value="">Selecione...</option>
+                          <option value="Minas Gerais (CEMIG)">Minas Gerais (CEMIG)</option>
+                          <option value="São Paulo (CPFL / ENEL)">São Paulo (CPFL / ENEL)</option>
+                          <option value="Paraná (COPEL)">Paraná (COPEL)</option>
+                          <option value="Rio de Janeiro (LIGHT / ENEL)">Rio de Janeiro (LIGHT / ENEL)</option>
+                          <option value="Outro Estado">Outro Estado</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1" for="lead-value"
+                          >Valor Médio da Conta</label
+                        ><select
+                          class="w-full px-4 py-3.5 rounded-xl bg-surface-container-low text-on-surface focus:outline-none focus:ring-2 focus:ring-primary font-body-md text-body-md transition-all"
+                          id="lead-value"
+                          required=""
+                        >
+                          <option value="R$ 200 a R$ 500">R$ 200 a R$ 500</option>
+                          <option selected="" value="R$ 500 a R$ 1.500">R$ 500 a R$ 1.500</option>
+                          <option value="R$ 1.500 a R$ 5.000">R$ 1.500 a R$ 5.000</option>
+                          <option value="Acima de R$ 5.000">Acima de R$ 5.000</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="pt-2">
+                      <button
+                        class="w-full py-4 px-6 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 cursor-pointer"
+                        type="submit"
+                      >
+                        <span class="">Receber Proposta no WhatsApp</span><span class="material-symbols-outlined text-[20px]">chat</span>
+                      </button>
+                    </div>
+                    <p class="font-body-sm text-[12px] text-on-surface-variant text-center pt-2">
+                      🔒 Atendimento seguro e direto com consultor credenciado. Não enviamos spam.
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Interactive JavaScript for Simulator -->
+        <script>
+          let currentDiscountRate = 0.15; // 15% default discount for CPF
+
+          function setProfile(type) {
+            const btnRes = document.getElementById('btn-residential');
+            const btnCom = document.getElementById('btn-commercial');
+            if (type === 'residential') {
+              currentDiscountRate = 0.15;
+              btnRes.className =
+                'calc-type-btn flex-1 sm:flex-initial px-6 py-2.5 rounded-full font-label-md text-label-md transition-all bg-primary text-on-primary shadow-sm';
+              btnCom.className =
+                'calc-type-btn flex-1 sm:flex-initial px-6 py-2.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all';
+            } else {
+              currentDiscountRate = 0.2; // 20% default discount for CNPJ
+              btnCom.className =
+                'calc-type-btn flex-1 sm:flex-initial px-6 py-2.5 rounded-full font-label-md text-label-md transition-all bg-primary text-on-primary shadow-sm';
+              btnRes.className =
+                'calc-type-btn flex-1 sm:flex-initial px-6 py-2.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all';
+            }
+            const slider = document.getElementById('bill-slider');
+            if (slider) updateCalculation(slider.value);
+          }
+
+          function setPreset(val) {
+            const slider = document.getElementById('bill-slider');
+            if (slider) {
+              slider.value = val;
+              updateCalculation(val);
+            }
+          }
+
+          function updateCalculation(val) {
+            const bill = parseFloat(val);
+            document.getElementById('bill-display-val').innerText = bill.toLocaleString('pt-BR');
+
+            const monthlySavings = bill * currentDiscountRate;
+            const annualSavings = monthlySavings * 12;
+            const trees = Math.max(1, Math.round(annualSavings / 100));
+            const co2 = Math.round(annualSavings * 0.67);
+
+            document.getElementById('res-monthly').innerText = monthlySavings.toLocaleString('pt-BR', {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            });
+            document.getElementById('res-annual').innerText = annualSavings.toLocaleString('pt-BR', {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            });
+            document.getElementById('res-trees').innerText = trees;
+            document.getElementById('res-co2').innerText = co2.toLocaleString('pt-BR');
+          }
+        </script>
+      </div>
+    </main>
+    <footer class="w-full bg-surface-container-lowest">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12">
+          <div class="lg:col-span-2 space-y-4">
+            <div class="flex items-center gap-3">
+              <img
+                alt="iGreen Energy Logo"
+                class="h-8 w-auto object-contain"
+                src="https://lh3.googleusercontent.com/aida/AEtjO1UZ9eg9AkMsLTqU9GLSfnQAzFfhAJUZqWSM4Y6ViT90NtSNMSi2qSmd7J8z6WjmgpiUERtnI9T2WOWFmamGb3vaicCsWky8TR_aOnZlxzD2brEC4xvf_n1wxpmfBjj30aQvcVf0FEkwzbz7xoo61AOnoapRjbrRTPAC-Y54b-FnWW7nb2Fud1m4XHAR2O-uBTzpbVSL3DLb1Qn71orvNUMSHJ3rnV7WBzC3PUSEMTymCQ"
+              />
+              <div class="flex flex-col">
+                <span class="font-headline-sm text-headline-sm text-primary font-bold">iGreen Energy</span
+                ><span class="font-label-sm text-[11px] text-tertiary font-semibold uppercase">Consultor Licenciado Independente</span>
+              </div>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+              Atendimento e consultoria especializada em energia solar compartilhada. Conecte sua casa ou empresa a usinas limpas e reduza sua conta
+              sem nenhum investimento inicial.
+            </p>
+            <div class="flex items-center gap-2 pt-2">
+              <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-tertiary">
+                <span class="material-symbols-outlined text-[16px]">verified</span
+                ><span class="font-label-sm text-label-sm">Parceiro Autorizado Conexão Green</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <span class="font-label-md text-label-md text-on-surface uppercase tracking-wider block">Navegação</span>
+            <ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+              <li class=""><a class="hover:text-on-surface transition-colors" data-path="como-funciona" href="#como-funciona">Como Funciona</a></li>
+              <li class=""><a class="hover:text-on-surface transition-colors" data-path="vantagens" href="#vantagens">Vantagens</a></li>
+              <li class=""><a class="hover:text-on-surface transition-colors" data-path="simulador-de-economia" href="#simulador">Simulador</a></li>
+              <li class="">
+                <a class="hover:text-on-surface transition-colors" data-path="sustentabilidade" href="#sustentabilidade">Sustentabilidade</a>
+              </li>
+              <li class=""><a class="hover:text-on-surface transition-colors" data-path="depoimentos" href="#depoimentos">Depoimentos</a></li>
+            </ul>
+          </div>
+          <div class="space-y-3">
+            <span class="font-label-md text-label-md text-on-surface uppercase tracking-wider block">Atendimento</span>
+            <ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-primary">support_agent</span>Atendimento com Consultor Licenciado
+              </li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">chat</span>WhatsApp Direto</li>
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-primary">schedule</span>Seg à Sáb, 8h às 20h
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-primary">bolt</span>Ativação 100% Digital
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-3">
+            <span class="font-label-md text-label-md text-on-surface uppercase tracking-wider block">Legal &amp; Regulação</span>
+            <div class="p-3 rounded-lg bg-surface-container-low space-y-2">
+              <div class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0">verified_user</span>
+                <p class="font-label-sm text-label-sm text-on-surface-variant">
+                  ANEEL Marco Legal<br /><span class="font-body-sm text-[11px] text-on-surface-variant">Lei nº 14.300/2022 de GD</span>
+                </p>
+              </div>
+              <p class="font-body-sm text-[11px] text-on-surface-variant">
+                Intermediação autorizada de geração compartilhada de energia solar nos termos regulatórios.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-surface-container pt-6 space-y-4">
+          <p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">
+            <strong>Aviso Legal &amp; Transparência:</strong> Esta página é mantida por um Consultor Licenciado Independente da iGreen Energy. As
+            marcas, logotipos e materiais visuais são de titularidade da iGreen Energy Brasil S.A. e são utilizados para fins de divulgação e
+            intermediação autorizada dos planos de energia solar por assinatura nos termos da Lei nº 14.300/2022.
+          </p>
+          <div class="flex flex-col md:flex-row items-center justify-between gap-4 font-body-sm text-[12px] text-on-surface-variant">
+            <p class="">© 2025 Consultor Licenciado iGreen Energy. Todos os direitos reservados.</p>
+            <div class="flex items-center gap-6 font-label-sm text-label-sm">
+              <a class="hover:text-on-surface transition-colors" data-path="termos-de-uso" href="#">Termos de Uso</a
+              ><a class="hover:text-on-surface transition-colors" data-path="politica-de-privacidade" href="#">Política de Privacidade</a
+              ><a class="hover:text-on-surface transition-colors" data-path="duvidas" href="#duvidas">Dúvidas Frequentes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-50">
+      <a
+        class="flex items-center gap-2.5 px-4 py-3 rounded-full bg-primary hover:bg-primary-container text-on-primary shadow-2xl transition-all hover:scale-105"
+        href="#cadastro"
+        id="btn-floating-whatsapp"
+        title="Falar com Consultor Licenciado iGreen"
+        ><span class="material-symbols-outlined text-[24px]">chat</span
+        ><span class="font-label-md text-label-md font-bold pr-1">Fale com o Consultor</span></a
+      >
+    </div>
+    <script>
+      function enviarWhatsApp(event) {
+        event.preventDefault();
+        var name = document.getElementById('lead-name').value;
+        var tel = document.getElementById('lead-whatsapp').value;
+        var state = document.getElementById('lead-state').value;
+        var bill = document.getElementById('lead-value').value;
+        var msg =
+          'Olá! Gostaria de receber uma simulação da iGreen Energy com você, meu Consultor Licenciado:%0A%0A' +
+          '*Nome:* ' +
+          encodeURIComponent(name) +
+          '%0A' +
+          '*WhatsApp:* ' +
+          encodeURIComponent(tel) +
+          '%0A' +
+          '*Estado/Concessionária:* ' +
+          encodeURIComponent(state) +
+          '%0A' +
+          '*Valor Médio da Conta:* ' +
+          encodeURIComponent(bill);
+        var waUrl = 'https://wa.me/5508000000000?text=' + msg;
+        window.open(waUrl, '_blank');
+      }
+    </script>
+  </body>
+</html>
